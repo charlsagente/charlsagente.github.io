@@ -5,7 +5,7 @@
 $(document).ready(function(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            //$("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+
             $.ajax({
                 method: "GET",
                 url: "http://api.openweathermap.org/data/2.5/weather",
@@ -25,7 +25,17 @@ $(document).ready(function(){
                             $('#weather-icon').addClass('wi customize-icons wi-day-sunny');
                         }
                     });
-                    $('div span').text(msg.name+", "+msg.sys.country);
+                    var spans=
+                            [msg.weather[0].description,
+                            msg.name+", "+msg.sys.country,
+                                ((msg.main.temp-273.15)*1.8 + 32).toFixed(2)," <a href=\"#\">&deg; F</a>"
+
+                            ]
+
+                    $('div p span').each(function(index,element){
+                        $(element).html(spans[index]);
+
+                    });
 
                 });
         });
