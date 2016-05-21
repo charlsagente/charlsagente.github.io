@@ -1,6 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
 .customize-icons{
     font-size:50px;
-    color:#ffb865;
+    color:#000;
+}
+a{
+    color: #001b63;
 }
 
 .site-wrapper {
@@ -11,36 +16,56 @@
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
+
 .site-wrapper-inner {
     display: table-cell;
     vertical-align: middle;
 }
 
 .cover-container {
-    margin-right: auto;
-    margin-left: auto;
+
+    background-color: rgba(150,150,150,0.6);
+    margin: 10px 30% 20px 30%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 1%;
+
 }
-.inner {
-    padding: 30px;
-}
+
 
 
 .cover {
     padding: 0 20px;
 }
 .cover .btn-lg {
-    padding: 10px 20px;
+    padding: 0px 0px;
     font-weight: bold;
 }
 
 html,
 body {
     height: 100%;
-    background-color: #333;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+    margin: 0px 0px 0px 0px;
     font-weight: bold;
 }
 body {
-    color: #fff;
+    color: #000;
+    font-family: 'Inconsolata',serif;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    text-shadow: 0 1px 3px rgba(255,255,255,.3);
+}
+
+/*BG images*/
+
+.bg-rainy{
+    background-image: url("../img/rainy-weather_00447154.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: auto;
+
+
 }
