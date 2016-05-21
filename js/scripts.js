@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var host = "charlsagente.github.io";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+
 
 $("#navbar ul li a[href^='#']").on('click', function(e) {
 
