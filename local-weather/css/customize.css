@@ -69,3 +69,46 @@ body {
 
 
 }
+
+.bg-clouds{
+    background-image: url("../img/917797-weather-wallpaper.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: auto;
+
+
+}
+
+.bg-sunny{
+    background-image: url("../img/gcIAxqB.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.bg-snowy{
+    background-image: url("../img/Winter-image-winter-36156247-1366-768.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.bg-foggy{
+    background-image: url("../img/road-fog-foggy-mist.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: auto;
+
+}
