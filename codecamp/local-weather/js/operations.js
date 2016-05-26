@@ -70,7 +70,7 @@ $(document).ready(function () {
                     alert("An error has ocurred, maybe https because security");
                     console.log(error);
                 }
-            })
+            });
 
         });
     }

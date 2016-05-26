@@ -1,0 +1,34 @@
+.container{
+    #background-color: rgba(150,150,150,0.6);
+    margin: 40px 10% 20px 10%;
+
+    border-radius: 1%;
+}
+
+.row{
+    margin-bottom: 20px;
+
+}
+
+
+.row .list-group a:hover{
+    background-color: #337AB7 !important;
+    border-color:#337AB7 !important;
+
+}
+
+
+#searchinput {
+    width: 200px;
+}
+#searchclear {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ccc;
+}
