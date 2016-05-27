@@ -9,26 +9,28 @@ $("#searchclear").click(function(){
 
 
         $.ajax({
-            
+
             method:"POST",
-            dataType: 'json',
+            dataType: 'jsonp',
+            jsonp: "callback",
             headers: {
-                'Api-User-Agent': 'Example/1.0' ,
-                'Access-Control-Allow-Origin': '*'
+
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Api-User-Agent': 'Example/1.0'
+
             },
-            url: "https://en.wikipedia.org/w/api.php",
+            url: "https://en.wikipedia.org/w/api.php?action=query&titles=Racism&prop=revisions&rvprop=content&format=jsonfm",
             data: {
-                action:'query',
-                prop:'revisions',
-                rvprop:'rvprop',
-                format:'json',
-                titles: $("#searchinput").val(),
-
-
+                action: "query",
+                list: "search",
+                srsearch: "javascript",
+                format: "json"
             },
+
 
             success: function (msg) {
-                console.log(msg.weather[0].id);
+                console.log(msg);
 
 
             },
