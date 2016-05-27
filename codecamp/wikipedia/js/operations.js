@@ -3,10 +3,18 @@
  */
 $(document).ready(function(){
 
-    $("#searchclear").click(function(){
-        $("#searchinput").val('');
-        $("#searchinput").focus();
-        $( ".list-group" ).empty();
+    $("#searchclear").click(function() {
+
+        $('.list-group').addClass('animated bounceOutDown');
+        $('.list-group').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $('.list-group').removeClass('animated bounceOutDown');
+            $("#searchinput").val('');
+            $("#searchinput").focus();
+            $(".list-group").empty();
+
+        });
+
+
     });
 
     $("#searchinput").keyup(function (e) {
@@ -27,7 +35,7 @@ $(document).ready(function(){
                 url: "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=JSON_CALLBACK&gsrsearch="+encodeURI($("#searchinput").val()),
 
                 success: function (msg) {
-                    console.log(msg.query.pages);
+                    
 
                     $( ".list-group" ).empty();
 
@@ -54,6 +62,11 @@ $(document).ready(function(){
 
 
 
+                    });
+
+                    $('.list-group').addClass('animated bounceInUp');
+                    $('.list-group').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                        $('.list-group').removeClass('animated bounceInUp');
                     });
 
 
