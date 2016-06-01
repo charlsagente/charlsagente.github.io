@@ -1,0 +1,17 @@
+.table{
+    vertical-align: middle;
+
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+img{
+    border-radius: 50%;
+
+}
+
+body{
+    margin: 2% 10% 10% 10%;
+}
