@@ -24,4 +24,7 @@ $("#navbar ul li a[href^='#']").on('click', function(e) {
 
 });
 
+    $(".progress-bar").animate({
+        width: "70%"
+    }, 2500);
 });

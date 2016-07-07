@@ -148,3 +148,76 @@
     margin-top: 120px;
   }
 }
+
+
+/*
+
+customize progress bars
+*/
+
+.progress {
+  margin-bottom: 6px;
+  background-color: transparent;
+  border-radius: 11px;
+  box-shadow: none;
+  border: 1px solid #303030;
+  padding: 3px;
+  height: 26px;
+}
+.progress .progress-bar {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.progress-bar {
+  font-size: 13px;
+  background-color: #839f9a;
+  box-shadow: none;
+  border-radius: 11px;
+  line-height: 18px;
+  padding-left: 6px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.progress-meter {
+  min-height: 15px;
+  border-bottom: 1px solid #303030;
+}
+
+.progress-meter > .meter {
+  position: relative;
+  float: left;
+  min-height: 15px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #303030;
+}
+
+.progress-meter > .meter-left {
+  border-left-width: 1px;
+}
+
+.progress-meter > .meter-right {
+  float: right;
+  border-right-width: 1px;
+}
+
+.progress-meter > .meter-right:last-child {
+  border-left-width: 1px;
+}
+
+.progress-meter > .meter > .meter-text {
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  width: 100%;
+  font-size: 12px;
+  color: #606060;
+  text-align: left;
+}
+
+.progress-meter > .meter.meter-right > .meter-text {
+  text-align: right;
+}
+
